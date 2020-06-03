@@ -23,6 +23,14 @@ Add the following line under composer.json scripts property.
 }
 ```
 
+### PHPStorm: enable inspections
+- Search for "PHP CS Fixer" under Quality Tools
+- Add a local configuration with path `php-cs-fixer`
+- Search for "PHP CS Fixer validation" under Inspections
+- Flag "Allow ricky rules"
+- Select Custom ruleset
+- Click on the 3 dots and enter `<your-project-directory>/vendor/fattureincloud/php-code-standard/.php_cs.dist`
+
 ### PHPStorm: configure file watcher
 Create a file watcher with the following values:
 ```
