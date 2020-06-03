@@ -18,14 +18,14 @@ Add the following line under composer.json scripts property.
 ```
 "scripts": {
     ...
-    "php-cs-fixer": "php-cs-fixer --allow-risky=yes --config=./vendor/fattureincloud/php-code-standard/.php_cs.dist"
+    "php-cs-fixer": "./vendor/bin/php-cs-fixer --allow-risky=yes --config=./vendor/fattureincloud/php-code-standard/.php_cs.dist"
     ...
 }
 ```
 
 ### PHPStorm: enable inspections
 - Search for "PHP CS Fixer" under Quality Tools
-- Add a local configuration with path `php-cs-fixer`
+- Add a local configuration with path `$PROJECT_DIR$/vendor/friendsofphp/php-cs-fixer/php-cs-fixer`
 - Search for "PHP CS Fixer validation" under Inspections
 - Flag "Allow ricky rules"
 - Select Custom ruleset
@@ -37,7 +37,7 @@ Create a file watcher with the following values:
 Name: php-cs-fixer
 File type: PHP
 Scope: Current File
-Program: php-cs-fixer
+Program: $ProjectFileDir$/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
 Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/vendor/fattureincloud/php-code-standard/.php_cs.dist $FileDir$/$FileName$
 Output paths to refresh: $FileDir$/$FileName$
 ```
@@ -49,7 +49,7 @@ Create an external tool with the following values:
 Name: Run PHP CS Fixer
 File type: Run PHP CS Fixer
 Group: External Tools
-Program: php-cs-fixer
+Program: $ProjectFileDir$/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
 Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/.php_cs.dist --verbose $ProjectFileDir$
 ```
 Flag `Synchronize files after execution` and `Open console for tool output`.
