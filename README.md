@@ -3,6 +3,10 @@ PHP CS Fixer coding standard, extended from @PhpCsFixer.
 
 ## Usage
 
+```
+composer require fattureincloud/php-code-standard --dev
+```
+
 ### Add lint-staged action
 Put this line as lint-staged action in package.json.
 ```
