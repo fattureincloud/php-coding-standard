@@ -61,7 +61,7 @@ Add the following line under composer.json scripts property.
 - Select Custom ruleset
 - Click on the 3 dots and enter `<your-project-directory>/vendor/fattureincloud/php-code-standard/.php_cs.dist`
 
-### Configure file watcher
+#### Configure file watcher
 Create a file watcher with the following values:
 ```
 Name: php-cs-fixer
@@ -73,7 +73,7 @@ Output paths to refresh: $FileDir$/$FileName$
 ```
 De-flag all the advanced options.
 
-### Configure external tool (optional)
+#### Configure external tool (optional)
 Create an external tool with the following values:
 ```
 Name: Run PHP CS Fixer
