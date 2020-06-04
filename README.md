@@ -10,20 +10,35 @@ composer require friendsofphp/php-cs-fixer --dev
 ```
 
 #### Install husky + lint-staged
+Create a `package.json` like this one:
 ```
-npm install husky --save-dev
-npm install lint-staged --save-dev
-```
-Add this lines to package.json:
-```
-"lint-staged": {},
-"husky": {
+{
+  "description": "For automation purposes",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7"
+  },
+  "lint-staged": {},
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  }
 }
 ```
-Remember to add package.json and package-lock.json to `.gitignore`.
+Run `npm install`.
+
+Add these lines to `composer.json`:
+```
+"scripts": {
+    ...
+    "post-install-cmd": "npm_config_loglevel=silent npm install",
+    "post-update-cmd": "npm_config_loglevel=silent npm install",
+    ...
+}
+```
+Finally, remember to add `node_modules/` to `.gitignore`.
 
 ## Installation and usage
 
@@ -32,7 +47,7 @@ composer require fattureincloud/php-code-standard --dev
 ```
 
 #### Add lint-staged action
-Put this line as lint-staged action in package.json in order to execute PHP CS Fixer on all the staged files at commit time.
+Put this line as lint-staged action in `package.json` in order to execute PHP CS Fixer on all the staged files at commit time.
 ```
 "lint-staged": {
     ...
@@ -42,7 +57,7 @@ Put this line as lint-staged action in package.json in order to execute PHP CS F
 ```
 
 #### Add composer script (optional)
-Add the following line under composer.json scripts property.
+Add the following line under `composer.json` scripts property.
 ```
 "scripts": {
     ...
