@@ -92,10 +92,11 @@ De-flag all the advanced options.
 Create an external tool with the following values:
 ```
 Name: Run PHP CS Fixer
-File type: Run PHP CS Fixer
+Description: Run PHP CS Fixer
 Group: External Tools
 Program: $ProjectFileDir$/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
-Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/.php_cs.dist --verbose $ProjectFileDir$
+Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/vendor/fattureincloud/php-code-standard/.php_cs.dist --verbose $FilePath$
+Working directory: $ProjectFileDir$
 ```
 Flag `Synchronize files after execution` and `Open console for tool output`.
 
