@@ -17,6 +17,7 @@ return PhpCsFixer\Config::create()
         'no_superfluous_phpdoc_tags' => false,
         'ordered_class_elements' => false,
         'phpdoc_add_missing_param_annotation' => ['only_untyped' => false],
+        'phpdoc_to_comment' => false,
         'yoda_style' => false,
         // Risky
         'is_null' => ['use_yoda_style' => false],
