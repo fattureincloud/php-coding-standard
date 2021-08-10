@@ -20,7 +20,6 @@ return PhpCsFixer\Config::create()
         'phpdoc_to_comment' => false,
         'yoda_style' => false,
         // Risky
-        'is_null' => ['use_yoda_style' => false],
         'no_alias_functions' => true,
         'non_printable_character' => ['use_escape_sequences_in_strings' => true],
     ])
