@@ -1,7 +1,7 @@
 {
   "name": "fattureincloud/php-code-standard",
   "description": "PHP CS Fixer coding standard, extended from @PhpCsFixer.",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "license": "MIT",
   "require": {
     "php": ">=5.4.0"
