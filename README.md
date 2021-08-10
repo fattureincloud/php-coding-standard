@@ -51,7 +51,7 @@ Put this line as lint-staged action in `package.json` in order to execute PHP CS
 ```
 "lint-staged": {
     ...
-    "*.php": "php ./vendor/bin/php-cs-fixer fix --allow-risky=yes --config ./vendor/fattureincloud/php-code-standard/.php_cs.dist"
+    "*.php": "php ./vendor/bin/php-cs-fixer fix --allow-risky=yes --config ./vendor/fattureincloud/php-code-standard/.php_cs.dist.php"
     ...
 },
 ```
@@ -61,7 +61,7 @@ Add the following line under `composer.json` scripts property.
 ```
 "scripts": {
     ...
-    "php-cs-fixer": "./vendor/bin/php-cs-fixer --allow-risky=yes --config=./vendor/fattureincloud/php-code-standard/.php_cs.dist"
+    "php-cs-fixer": "./vendor/bin/php-cs-fixer --allow-risky=yes --config=./vendor/fattureincloud/php-code-standard/.php_cs.dist.php"
     ...
 }
 ```
@@ -74,7 +74,7 @@ Add the following line under `composer.json` scripts property.
 - Search for "PHP CS Fixer validation" under Inspections
 - Flag "Allow ricky rules"
 - Select Custom ruleset
-- Click on the 3 dots and enter `<your-project-directory>/vendor/fattureincloud/php-code-standard/.php_cs.dist`
+- Click on the 3 dots and enter `<your-project-directory>/vendor/fattureincloud/php-code-standard/.php_cs.dist.php`
 
 #### Configure file watcher
 Create a file watcher with the following values:
@@ -83,7 +83,7 @@ Name: php-cs-fixer
 File type: PHP
 Scope: Current File
 Program: $ProjectFileDir$/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
-Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/vendor/fattureincloud/php-code-standard/.php_cs.dist $FileDir$/$FileName$
+Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/vendor/fattureincloud/php-code-standard/.php_cs.dist.php $FileDir$/$FileName$
 Output paths to refresh: $FileDir$/$FileName$
 ```
 De-flag all the advanced options.
@@ -95,7 +95,7 @@ Name: Run PHP CS Fixer
 Description: Run PHP CS Fixer
 Group: External Tools
 Program: $ProjectFileDir$/vendor/friendsofphp/php-cs-fixer/php-cs-fixer
-Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/vendor/fattureincloud/php-code-standard/.php_cs.dist --verbose $FilePath$
+Arguments: fix --allow-risky=yes --config=$ProjectFileDir$/vendor/fattureincloud/php-code-standard/.php_cs.dist.php --verbose $FilePath$
 Working directory: $ProjectFileDir$
 ```
 Flag `Synchronize files after execution` and `Open console for tool output`.
