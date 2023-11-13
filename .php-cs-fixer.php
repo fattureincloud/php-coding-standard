@@ -29,6 +29,7 @@ $config->setRules([
             ->exclude('tests/Fixtures')
             ->in(__DIR__)
     )
+    ->setRiskyAllowed(true)
     ->setUsingCache(false);
 
 return $config;
