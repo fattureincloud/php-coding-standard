@@ -15,6 +15,7 @@ $config->setRules([
     'increment_style' => ['style' => 'post'],
     'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
     'no_leading_import_slash' => true,
+    'global_namespace_import' => false,
     'no_superfluous_phpdoc_tags' => false,
     'ordered_class_elements' => false,
     'phpdoc_add_missing_param_annotation' => ['only_untyped' => false],
