@@ -24,7 +24,7 @@ $config->setRules([
     // Risky
     'no_alias_functions' => true,
     'non_printable_character' => ['use_escape_sequences_in_strings' => true],
-    'phpdoc_order' => ['order' => ['param', 'throws', 'return']],
+    'phpdoc_order' => true,
 ])
     ->setFinder(
         PhpCsFixer\Finder::create()
