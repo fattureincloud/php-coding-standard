@@ -21,6 +21,7 @@ $config->setRules([
     'phpdoc_add_missing_param_annotation' => ['only_untyped' => false],
     'phpdoc_to_comment' => false,
     'yoda_style' => false,
+    'php_unit_test_class_requires_covers' => false,
     // Risky
     'no_alias_functions' => true,
     'non_printable_character' => ['use_escape_sequences_in_strings' => true],
